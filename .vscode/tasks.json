@@ -17,6 +17,16 @@
           "kind": "build",
           "isDefault": true
         }
-      }
+      },
+      {
+        "label": "build",
+        "command": "dotnet",
+        "type": "process",
+        "args": [ "build" ],
+        "options": {
+            "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": "$tsc"
+    }
     ]
   }

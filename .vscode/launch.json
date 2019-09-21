@@ -5,21 +5,38 @@
     "version": "0.2.0",
     "configurations": [
         {
-          "name": "(lldb) Launch",
-          "type": "cppdbg",
-          "request": "launch",
-          "program": "${workspaceFolder}/helloworld.out",
-          "args": [],
-          "stopAtEntry": true,
-          "cwd": "${workspaceFolder}",
-          "environment": [],
-          "externalConsole": true,
-          "MIMode": "lldb",
-          "logging": {
-            "trace": true,
-            "traceResponse": true,
-            "engineLogging": true
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.2/leetcode.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        },
+        {
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/helloworld.out",
+            "args": [],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "logging": {
+              "trace": true,
+              "traceResponse": true,
+              "engineLogging": true
+            }
           }
-        }
       ]
 }
