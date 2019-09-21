@@ -1,38 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Solution {
-    public int[] TwoSum(int[] nums, int target) {
-        Dictionary<int, int> map = new Dictionary<int, int>();
-        for (var i = 0; i < nums.Length; i++)
+namespace s1
+{
+    public class Solution
+    {
+        public int[] TwoSum(int[] nums, int target)
         {
-            map[nums[i]] = i;
-        }
-        for (var i = 0; i < nums.Length; i++)
-        {
-            var r = target - nums[i];
-            if (map.ContainsKey(r) && map[r] != i)
+            Dictionary<int, int> map = new Dictionary<int, int>();
+            for (var i = 0; i < nums.Length; i++)
             {
-                return new int[] {i, map[r]};
+                map[nums[i]] = i;
             }
-        }
-        return null;
-        
-    }
-
-    public int[] s2(int[] nums, int target) {
-        var x = 0;
-        var y = 0;
-        for (;x < nums.Length; x++)
-        {
-            for(y = x + 1;y < nums.Length; y++)
+            for (var i = 0; i < nums.Length; i++)
             {
-                if (nums[x] + nums[y] == target)
+                var r = target - nums[i];
+                if (map.ContainsKey(r) && map[r] != i)
                 {
-                    return new int[]{x,y};
+                    return new int[] { i, map[r] };
                 }
             }
+            return null;
+
         }
-        return null;
+
+        public int[] s2(int[] nums, int target)
+        {
+            var x = 0;
+            var y = 0;
+            for (; x < nums.Length; x++)
+            {
+                for (y = x + 1; y < nums.Length; y++)
+                {
+                    if (nums[x] + nums[y] == target)
+                    {
+                        return new int[] { x, y };
+                    }
+                }
+            }
+            return null;
+        }
     }
 }
