@@ -13,6 +13,10 @@
           "helloworld.out",
           "--debug"
         ],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
         "problemMatcher": [
           "$gcc"
         ]
@@ -28,10 +32,6 @@
           "helloworld.out",
           "--debug"
         ],
-        "group": {
-          "kind": "build",
-          "isDefault": true
-        },
         "problemMatcher": [
           "$gcc"
         ]
