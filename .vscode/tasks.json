@@ -13,20 +13,40 @@
           "helloworld.out",
           "--debug"
         ],
+        "problemMatcher": [
+          "$gcc"
+        ]
+      },
+      {
+        "label": "Build with gcc",
+        "type": "shell",
+        "command": "g++",
+        "args": [
+          "-std=c++14",
+          "helloworld.cpp",
+          "-o",
+          "helloworld.out",
+          "--debug"
+        ],
         "group": {
           "kind": "build",
           "isDefault": true
-        }
+        },
+        "problemMatcher": [
+          "$gcc"
+        ]
       },
       {
-        "label": "build",
+        "label": "build csharp",
         "command": "dotnet",
         "type": "process",
-        "args": [ "build" ],
+        "args": [
+          "build"
+        ],
         "options": {
-            "cwd": "${workspaceFolder}"
+          "cwd": "${workspaceFolder}"
         },
         "problemMatcher": "$tsc"
-    }
+      }
     ]
   }
