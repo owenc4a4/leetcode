@@ -1,5 +1,6 @@
 *.out
 *.dSYM
 .vscode/
+*.exe
 bin/
 obj/

@@ -17,16 +17,20 @@
             "intelliSenseMode": "gcc-x64"
         },
         {
-            "name": "Win",
+            "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "${vcpkgRoot}/x86-windows/include"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
             ],
-            "intelliSenseMode": "msvc-x64"
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "C:\\mingw-w64\\x86_64-8.1.0-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++14"
         }
     ],
     "version": 4

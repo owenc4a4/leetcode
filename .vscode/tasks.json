@@ -37,6 +37,12 @@
         ]
       },
       {
+        "label": "build Win32",
+        "type": "shell",
+        "command": "g++",
+        "args": ["-g", "-o", "helloworld", "helloworld.cpp"],
+      },
+      {
         "label": "build csharp",
         "command": "dotnet",
         "type": "process",
